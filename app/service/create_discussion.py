@@ -81,8 +81,11 @@ def discussion(summary) :
 
         "title": "<positive opinion + negative opinion>",
         "category": "<one of option:정치/사회, 경제, 생활/문화, 과학/기술, 스포츠, 엔터테인먼트>",
-        "content": "positive opinion : <example of a positive opinion>  negative opinion : <example of a negative opinion>",
-
+        "content": "content",
+        "vote for or against" : "
+     What do you think about <content>?
+     positive opinion - < > 
+     negative opinion - < > "
     """),
         ("user", "{input}")
     ])
