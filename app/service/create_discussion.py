@@ -29,7 +29,6 @@ def summation(input_data):
         1. Its role is to summarize news articles.
         2. I will provide the title, date, and content.
         3. Summarize the content 
-        4. If there is no article, a null value is provided.
         default. Answer just one. Please respond in this json format. 
      
         "title": " ",
