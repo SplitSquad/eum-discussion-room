@@ -22,16 +22,16 @@ class DiscussionResponse(BaseModel):
 @router.post("/discussion", response_model=DiscussionResponse)
 async def generate_discussion(articles: List[Article]):
     try:
-        # 👉 1. 사용자 입력 데이터를 JSON 문자열로 직렬화
+        # 1. 사용자 입력 데이터를 JSON 문자열로 직렬화
         input_json = json.dumps([article.dict() for article in articles], ensure_ascii=False)
 
-        # 👉 2. 기사 요약
+        # 2. 기사 요약
         summary_result = summation(input_json)
 
-        # 👉 3. 토론방 생성
+        # 3. 토론방 생성
         discussion_result = discussion(summary_result)
 
-        # 👉 4. 응답
+        # 4. 응답
         return DiscussionResponse(
             discussion=discussion_result
         )
