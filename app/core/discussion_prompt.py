@@ -4,6 +4,7 @@ class Prompt():
         prompt = f"""
         1. summarize the article.
         2. We need to create a discussion board too
+        3. must select the content from here (정치/사회, 경제, 생활/문화, 과학/기술, 스포츠, 엔터테인먼트)
         default. must return it in Korean
         
         !!!Do NOT include any explanation or message. ONLY return a valid JSON object. No natural language.
@@ -25,7 +26,7 @@ class Prompt():
         output :
             title: 
             category: 
-            content: 정치/시사
+            content: 정치/사회
             vote : <>에 대해 어떻게생각하세요?
             positive : < positive opinion > 
             negative : < negative opinion >
