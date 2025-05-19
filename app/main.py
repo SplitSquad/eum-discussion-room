@@ -7,7 +7,7 @@ from py_eureka_client import eureka_client
 from app.config.eureka_config import APP_NAME, PORT, EUREKA_URL
 
 import asyncio
-
+# 1
 # 환경변수 로딩
 load_dotenv()
 
