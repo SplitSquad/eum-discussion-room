@@ -52,7 +52,7 @@ jobs:
       - name: Update manifest repository
         env:
           ECR_REGISTRY: 879657431997.dkr.ecr.ap-northeast-2.amazonaws.com
-          ECR_REPOSITORY: eum-discussion-room
+          ECR_REPOSITORY: eum-debate-room
           IMAGE_TAG: ${{ github.sha }}
           GIT_USERNAME: ${{ secrets.GIT_USERNAME }}
           GIT_TOKEN: ${{ secrets.GIT_TOKEN }}
