@@ -4,6 +4,7 @@ from py_eureka_client import eureka_client
 from dotenv import load_dotenv
 from os import getenv, path
 from loguru import logger
+from app.api.v1 import discussion  # 또는 agentic 등
 
 # 환경 변수 로드
 env_path = path.join(path.dirname(path.dirname(__file__)), '.env')
@@ -39,8 +40,9 @@ async def lifespan(app: FastAPI):
     # 종료 시 필요한 정리 작업을 여기에 추가할 수 있습니다.
     logger.info("[EUREKA] 🔻 Application shutdown initiated")
 
-app = FastAPI(lifespan=lifespan)
 
+app = FastAPI(lifespan=lifespan)
+app.include_router(discussion.router, prefix="/api/v1", tags=["discussion"])
 
 # # 1
 # # 환경변수 로딩
